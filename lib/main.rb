@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# variable global
+total_frame = 10
 # Class Bowling
 class Bowling
   def intialize(_roll)
@@ -7,7 +9,7 @@ class Bowling
     @total_rolls = []
   end
 
-  def tiro 
+  def tiro
     total_rolls=0
     @tiro=rand(0..11) #primer tiro
     resto=10-@tiro
@@ -19,6 +21,20 @@ class Bowling
      puts @tiro
      end
      puts total_rolls
+     total_frame
+  end
+
+
+
+  def total_frame
+    total_frame = total_frame - 1
+    puts "mesnos un frame #{total_frame}"
+
+  end
+
+  def strike
+    strike = 10
+
   end
 
   def frame_points
