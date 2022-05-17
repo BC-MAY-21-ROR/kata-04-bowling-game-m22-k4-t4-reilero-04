@@ -4,11 +4,21 @@
 class Bowling
   def intialize(_roll)
     @roll = 0
-    @total_rolls = Array.new(20,0)
+    @total_rolls = []
   end
 
   def tiro 
-    @total_rolls = 2.times { |roll| rand(0...10) }
+    total_rolls=0
+    @tiro=rand(0..11) #primer tiro
+    resto=10-@tiro
+     2.times do
+      if resto>0
+            @tiro=rand(0..resto)
+      total_rolls=@tiro+total_rolls
+      end
+     puts @tiro
+     end
+     puts total_rolls
   end
 
   def frame_points
@@ -20,4 +30,4 @@ end
 
 test = Bowling.new
 
-puts test.tiro.inspect
+test.tiro
