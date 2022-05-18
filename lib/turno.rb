@@ -4,16 +4,16 @@ class Turno
     @second_roll = 0
     @total = 0
     @strike = false
-    @spear = false
+    @spare = false
   end
 
   def first_ball
-    @first_roll = rand(0...10)
+    @first_roll = rand(0..10)
   end
 
   def second_ball
     restantes = 10 - @first_roll
-    @second_roll = 1 + rand(restantes)
+    @second_roll = 1 + rand(restantes) if @first_roll != 10
   end
 
   def turn_completed
