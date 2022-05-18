@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
-require_relative 'turno'
+require_relative 'turn'
 
 # Class Rules
 class Rules
   def initialize
     @total_points = 0
     @global = []
-    @frame = frame
   end
 
   def first_frame

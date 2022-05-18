@@ -34,10 +34,10 @@ class Turn
   end
 end
 
-# test = Turno.new()
+ #test = Turn.new()
 
-# puts test.first_ball
-# puts test.second_ball
-# puts test.turn_completed
-# test.strike?
+ #puts test.first_ball
+ #puts test.second_ball
+ #puts test.turn_completed
+ #test.strike?
 # test.spare?
