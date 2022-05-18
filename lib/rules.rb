@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require_relative "turno"
 
 class Rules
   def initialize
@@ -6,7 +7,6 @@ class Rules
     @global = []
   end
 
-  def strike?
-    @strike
-  end
+  
 end
+
