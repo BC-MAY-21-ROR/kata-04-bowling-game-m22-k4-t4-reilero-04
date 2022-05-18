@@ -1,4 +1,7 @@
-class Turno
+# frozen_string_literal: true
+
+# Class Turn
+class Turn
   def initialize
     @first_roll = 0
     @second_roll = 0
@@ -31,10 +34,10 @@ class Turno
   end
 end
 
-#test = Turno.new()
+# test = Turno.new()
 
-#puts test.first_ball
-#puts test.second_ball
-#puts test.turn_completed
-#test.strike?
-#test.spare?
+# puts test.first_ball
+# puts test.second_ball
+# puts test.turn_completed
+# test.strike?
+# test.spare?
