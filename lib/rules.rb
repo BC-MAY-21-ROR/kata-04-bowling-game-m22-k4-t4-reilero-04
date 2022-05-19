@@ -7,13 +7,13 @@ class Rules
   def initialize
     @total_points = 0
     @global = []
-    @score=Array.new() {}
+    @score = Array.new {}
   end
 
   def first_frame
     @frame = Turn.new
-    puts first_ball = @frame.first_ball
-    puts second_ball = @frame.second_ball
+    puts @frame.first_ball
+    puts @frame.second_ball
     puts turn_completed = @frame.turn_completed
     @score << [turn_completed]
     puts @frame.strike?
