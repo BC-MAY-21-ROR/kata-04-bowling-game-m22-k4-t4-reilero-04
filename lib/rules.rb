@@ -12,10 +12,12 @@ class Rules
 
   def first_frame
     @frame = Turn.new
-    first_ball = @frame.first_ball
-    second_ball = @frame.second_ball
-    turn_completed = @frame.turn_completed
-    @score << [first_ball, second_ball, turn_completed]
+    puts first_ball = @frame.first_ball
+    puts second_ball = @frame.second_ball
+    puts turn_completed = @frame.turn_completed
+    @score << [turn_completed]
+    puts @frame.strike?
+    puts @frame.spare?
   end
 
   def start_game
