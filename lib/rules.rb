@@ -8,23 +8,20 @@ class Rules
     @total_points = 0
     @global = []
     @score=Array.new() {}
-
-
   end
 
   def first_frame
     @frame = Turn.new
-    puts @frame.first_ball
-    puts @frame.second_ball
-    puts @frame.turn_completed
-    @frame.strike?
-    @frame.spare?
-     @score<<[@frame.first_ball,@frame.second_ball,@frame.turn_completed]
+    first_ball = @frame.first_ball
+    second_ball = @frame.second_ball
+    turn_completed = @frame.turn_completed
+    @score << [first_ball, second_ball, turn_completed]
   end
 
   def start_game
     10.times { first_frame }
-    return @score.inspect
+
+    @score.flatten.inject(:+).inspect
   end
 end
 
