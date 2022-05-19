@@ -7,6 +7,9 @@ class Rules
   def initialize
     @total_points = 0
     @global = []
+    @score=Array.new() {}
+
+
   end
 
   def first_frame
@@ -16,13 +19,15 @@ class Rules
     puts @frame.turn_completed
     @frame.strike?
     @frame.spare?
+     @score<<[@frame.first_ball,@frame.second_ball,@frame.turn_completed]
   end
 
   def start_game
     10.times { first_frame }
+    return @score.inspect
   end
 end
 
 test = Rules.new
 
-test.start_game.inspect
+puts test.start_game
